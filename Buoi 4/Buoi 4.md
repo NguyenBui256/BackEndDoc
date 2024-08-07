@@ -135,6 +135,7 @@ Một phản hồi HTTP thường bao gồm các phần sau:
 
 **HTTP Version:** Phiên bản của giao thức HTTP được sử dụng (ví dụ, HTTP/1.1).
 **Status Code:** Mã trạng thái HTTP cho biết kết quả của yêu cầu (ví dụ, 200 OK, 404 Not Found, 500 Internal Server Error).
+
 ![alt text](image-1.png)
 
 #### 2. Response Headers (Tiêu đề phản hồi):
