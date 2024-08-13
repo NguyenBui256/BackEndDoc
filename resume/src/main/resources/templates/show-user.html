@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+</head>
+<body>
+User biograph:
+<br><br>
+Username: <span th:text="${name}"/>
+<br><br>
+DOB: <span th:text="${dob}"/>
+<br><br>
+Address: <span th:text="${address}"/>
+<br><br>
+Gender: <span th:text="${gender}"/>
+<br><br>
+Location: <span th:text="${location}"/>
+<br><br>
+Avatar: <img th:src="${avatar_url}" alt="user avatar">
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Input form</title>
+</head>
+<body>
+    <form th:action="@{/showUserForm}" th:object="${id}" method="GET">
+        <label>
+            <input type="number" id="id" name="id" th:value="" placeholder="Enter user id">
+        </label>
+        <button type="submit">Find</button>
+    </form>
+
+</body>
+
+
+
+
+</html>

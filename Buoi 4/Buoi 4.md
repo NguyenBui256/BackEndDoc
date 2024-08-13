@@ -249,3 +249,7 @@ Việc sử dụng IOC cần sử dụng DI bổ sung dependency vào controller
 
 # 6. Coding convetion
 https://vietnix.vn/code-convention-la-gi/
+
+-----------------
+Ioc là 1 tủ chứa, các @Component sẽ đc clone thành các object để sẵn trong Ioc, khi thằng nào dùng sẽ @Autowired + @Primary nếu có nhiều 
+Singleton: 1 class 1 object duy nhâts
