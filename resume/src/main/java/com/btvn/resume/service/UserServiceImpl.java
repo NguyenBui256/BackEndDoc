@@ -1,6 +1,7 @@
 package com.btvn.resume.service;
 
 import com.btvn.resume.dao.UserRepository;
+import com.btvn.resume.dto.UserDTO;
 import com.btvn.resume.model.NotFoundException;
 import com.btvn.resume.model.User;
 import lombok.RequiredArgsConstructor;
@@ -30,14 +31,24 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public List<User> findByName(String name) {
+        return List.of();
+    }
+
+    @Override
     public User save(User user) {
         return userRepository.save(user);
     }
 
     @Override
+    public void update(int id, UserDTO user) {
+
+    }
+
+    @Override
     public void deleteById(int id) {
         Optional<User> project = userRepository.findById(id);
-        if (project.isEmpty()) throw new NotFoundException("Project not found with the given ID.");
+        if (project.isEmpty()) throw new NotFoundException("User not found with the given ID.");
         userRepository.delete(project.get());
     }
 }

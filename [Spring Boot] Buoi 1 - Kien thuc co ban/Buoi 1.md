@@ -5,6 +5,8 @@
 - Design patern : DI, IOC
 - (Không bắt buộc) Coding convention
 
+# Buổi 1: Kiến thức cơ bản
+
 # 1. API là gì, RestAPI là gì?
 API (Application Programming Interface) là một tập hợp các quy tắc và giao thức cho phép các ứng dụng khác nhau giao tiếp và tương tác với nhau. API định nghĩa cách các phần mềm hoặc các dịch vụ có thể yêu cầu và trao đổi dữ liệu với nhau. Nó giống như một cầu nối cho phép các hệ thống và ứng dụng "nói chuyện" với nhau mà không cần phải biết rõ về cách hoạt động bên trong của nhau.
 

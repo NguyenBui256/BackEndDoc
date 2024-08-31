@@ -6,6 +6,8 @@ Nội dung cần chuẩn bị:
 - Lombok: @Getter, @Setter, @ToString, @Data, @Builder, @Constructior
 - Log trong SpringBoot : Log4j là gì và Antotation @Slf4j
 
+# Buổi 2 - Spring MVC
+
 # 1. Bean trong SpringBoot
 ### 1.1 Bean là gì?
 Trong mô hình của Spring Framework, **Bean** là các object mà IoC Container quản lý. Chúng là những thành phần cốt lõi được sử dụng để xây dựng ứng dụng. Bất kỳ đối tượng nào được khởi tạo, lắp ráp và quản lý bởi Spring IoC Container đều được gọi là Bean. Container này xử lý việc tạo ra và quản lý các Bean, bao gồm cả vòng đời của chúng từ khởi tạo đến hủy bỏ.

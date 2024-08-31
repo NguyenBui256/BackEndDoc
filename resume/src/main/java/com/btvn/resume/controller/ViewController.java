@@ -17,16 +17,10 @@ public class ViewController {
 
     private final UserService userService;
 
-    @RequestMapping("/searchUserForm")
-    public String searchUserForm(Model model){
-        model.addAttribute("id");
-        return "search-user";
-    }
-
     @RequestMapping("/showUserForm")
     public String showUserForm(@RequestParam("id") int id, Model model){
         User dataUser = userService.findById(id);
-        model.addAttribute("name", dataUser.getName());
+        model.addAttribute("name", dataUser.getUsername());
         model.addAttribute("dob", dataUser.getDob());
         model.addAttribute("gender", dataUser.getGender());
         model.addAttribute("location", dataUser.getLocation());

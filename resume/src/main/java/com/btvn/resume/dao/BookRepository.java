@@ -1,8 +1,9 @@
 package com.btvn.resume.dao;
 
-import com.btvn.resume.model.User;
+import com.btvn.resume.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Integer> {}
+public interface BookRepository extends JpaRepository<Book,Integer> {
+}
