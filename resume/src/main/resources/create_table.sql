@@ -30,3 +30,26 @@ create table libraries_books(
                              libraries_id int not null references libraries(id),
                              books_id int not null references books(id)
 );
+
+# create table users(
+#     id int auto_increment primary key,
+#     username varchar(255) unique not null,
+#     password varchar(255) not null,
+#     dob varchar(255),
+#     gender varchar(255),
+#     location text
+# );
+
+create table users(
+                      id int auto_increment primary key,
+                      username varchar(50) not null unique,
+                      password varchar(255) not null,
+                      enabled boolean not null
+);
+
+create table authorities (
+                     username varchar(50) not null,
+                     authority varchar(50) not null,
+                     constraint fk_authorities_users foreign key(username) references users(username)
+);
+create unique index ix_auth_username on authorities (username,authority);

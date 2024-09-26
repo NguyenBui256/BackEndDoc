@@ -25,15 +25,12 @@ public class User {
     private String gender;
     @Column(name = "location")
     private String location;
-    @Column(name = "avatar_url")
-    private String avatarUrl;
 
-    public User(String username, String password, String dob, String gender, String location, String avatarUrl) {
+    public User(String username, String password, String dob, String gender, String location) {
         this.username = username;
         this.password = password;
         this.dob = dob;
         this.gender = gender;
         this.location = location;
-        this.avatarUrl = avatarUrl;
     }
 }

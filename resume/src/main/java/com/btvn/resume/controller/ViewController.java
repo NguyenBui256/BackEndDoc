@@ -17,14 +17,23 @@ public class ViewController {
 
     private final UserService userService;
 
-    @RequestMapping("/showUserForm")
+    @RequestMapping("/show-user")
     public String showUserForm(@RequestParam("id") int id, Model model){
         User dataUser = userService.findById(id);
         model.addAttribute("name", dataUser.getUsername());
         model.addAttribute("dob", dataUser.getDob());
         model.addAttribute("gender", dataUser.getGender());
         model.addAttribute("location", dataUser.getLocation());
-        model.addAttribute("avatarUrl", dataUser.getAvatarUrl());
         return "show-user";
+    }
+
+    @GetMapping(value = {"/", "/home"})
+    public String homepage() {
+        return "home"; // Trả về home.html
+    }
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "hello"; // Trả về hello.html
     }
 }
