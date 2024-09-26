@@ -48,7 +48,7 @@ public class AuthorController {
     }
 
     @PutMapping("/{id}")
-    public CustomResponse<String> updateAuthor(@PathVariable int id, @RequestBody AuthorDTO authorDTO) {
+    public CustomResponse<String> updateAuthor(@PathVariable int id, @RequestBody @Valid AuthorDTO authorDTO) {
         authorService.update(id, authorDTO);
         return new CustomResponse<>("Author updated");
     }

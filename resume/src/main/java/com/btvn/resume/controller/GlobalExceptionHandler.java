@@ -4,6 +4,7 @@ import com.btvn.resume.dto.CustomResponse;
 import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -18,6 +19,13 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public CustomResponse<Object> handleNotFoundException(Exception exception) {
         return new CustomResponse<>(exception.getMessage());
+    }
+
+    @ExceptionHandler({MethodArgumentNotValidException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseBody
+    public CustomResponse<Object> handleBadInput(MethodArgumentNotValidException e) {
+        return new CustomResponse<>("Fields not validated: " + e.getMessage());
     }
 
     @ExceptionHandler({MissingServletRequestParameterException.class})

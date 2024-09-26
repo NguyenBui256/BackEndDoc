@@ -27,6 +27,9 @@ public class Library {
     private String name;
     @Column(name = "address")
     private String address;
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name="libraries_books",
+    joinColumns = @JoinColumn(name="libraries_id"),
+    inverseJoinColumns = @JoinColumn(name="books_id"))
     private Set<Book> books = new HashSet<>();
 }

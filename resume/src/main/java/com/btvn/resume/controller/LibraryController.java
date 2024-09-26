@@ -14,6 +14,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -34,6 +35,17 @@ public class LibraryController {
     @GetMapping("/{id}")
     public Library findById(@PathVariable int id){
         return libraryService.findById(id);
+    }
+
+    @GetMapping("/{id}/booknames")
+    public List<Integer> findBookNames(@PathVariable int id){
+        Library library = libraryService.findById(id);
+        List<String> bookNames = new ArrayList<>();
+        int cnt = 0;
+        for (int index = 0; index < library.getBooks().size(); index++){
+            cnt += library.getBooks().size();
+        }
+        return List.of(cnt);
     }
 
     @GetMapping("/{name}")
