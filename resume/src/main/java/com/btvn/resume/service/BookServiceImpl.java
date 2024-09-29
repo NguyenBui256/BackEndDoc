@@ -32,7 +32,7 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<Book> findByName(String name) {
+    public List<Book> findByUsername(String name) {
         return List.of();
     }
 

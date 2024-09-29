@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+            <button id="signupbutton">Click here to sign up</button>
+        </form>
+        <form id="passwordForm" style="display:none">
+            <input type="text" id="passwordId" placeholder="Id" required>
+            <input type="password" id="old-password" placeholder="Old password" required>
+            <input type="password" id="new-password" placeholder="New password" required>
+            <button type="submit">Submit</button>
+            <button id="passwordFormBackBtn">Back</button>
+        </form>
+        <form id="updateForm" style="display:none">
+            <input type="text" id="updateId" placeholder="Id" required>
+            <input type="text" id="updateUsername" placeholder="Username" required>
+            <button type="submit">Submit</button>
+            <button id="updateFormBackBtn">Back</button>
+        </form>
+        <form id="viewForm" style="display:none">
+            <input type="text" id="viewId" placeholder="Id" required>
+            <button type="submit">Submit</button>
+            <button id="viewFormBackBtn">Back</button>
+            <!-- <div id="userInfo"></div> -->
+        </form>
+        <div id="navigationBtn" style="display: none">
+            <button id="showOneBtn">View Your Info</button>
+            <button id="showAllBtn">View All User Info (Admin Only)</button>
+            <button id="changePasswordBtn">Change password</button>
+            <button id="updateBtn">Update Info</button>
+            <button id="logoutBtn">Logout</button>
+        </div>
+
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

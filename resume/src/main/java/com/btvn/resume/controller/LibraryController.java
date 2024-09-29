@@ -49,8 +49,8 @@ public class LibraryController {
     }
 
     @GetMapping("/{name}")
-    public List<Library> findByName(@PathVariable String name) {
-        return libraryService.findByName(name);
+    public List<Library> findByUsername(@PathVariable String name) {
+        return libraryService.findByUsername(name);
     }
 
     @PostMapping("")

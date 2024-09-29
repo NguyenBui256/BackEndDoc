@@ -13,7 +13,7 @@ import java.util.List;
 public interface LibraryService {
     Page<Library> findAll(int size, int page, String sortBy);
     Library findById(int id);
-    List<Library> findByName(String name);
+    List<Library> findByUsername(String name);
     Library save(Library library);
     void update(int id, LibraryDTO libraryDTO);
     void deleteById(int id);

@@ -33,7 +33,7 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public List<Author> findByName(String name) {
+    public List<Author> findByUsername(String name) {
         return List.of();
     }
 

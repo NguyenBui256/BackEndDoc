@@ -40,8 +40,8 @@ public class BookController {
     }
 
     @GetMapping("/{name}")
-    public List<Book> findByName(@PathVariable String name) {
-        return bookService.findByName(name);
+    public List<Book> findByUsername(@PathVariable String name) {
+        return bookService.findByUsername(name);
     }
 
     @PostMapping("")

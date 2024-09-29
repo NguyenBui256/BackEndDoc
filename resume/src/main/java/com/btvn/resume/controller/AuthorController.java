@@ -37,8 +37,8 @@ public class AuthorController {
     }
 
     @GetMapping("/{name}")
-    public List<Author> findByName(@PathVariable String name) {
-        return authorService.findByName(name);
+    public List<Author> findByUsername(@PathVariable String name) {
+        return authorService.findByUsername(name);
     }
 
     @PostMapping("")

@@ -1,0 +1,106 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Login Container */
+.login-container {
+    background: linear-gradient(135deg, #ffe031, #ff8800);
+    border-radius: 20px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title */
+h2 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Input Styles */
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 30px;
+    border: none;
+    background-color: #ffffff;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 30px;
+    background-color: #aa6c00;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+button:hover {
+    background-color: #004d40;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Logout Button Specific Styles */
+#navigationBtn {
+    display: none; /* Ban đầu ẩn đi */
+}
+
+#navigationBtn.visible {
+    display: block; /* Hiển thị khi người dùng login */
+}
+
+/* Placeholder for stable layout */
+.placeholder {
+    height: 0;
+    visibility: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

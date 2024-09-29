@@ -12,7 +12,7 @@ import java.util.List;
 public interface AuthorService {
     Page<Author> findAll(int size, int page, String sortBy);
     Author findById(int id);
-    List<Author> findByName(String name);
+    List<Author> findByUsername(String name);
     Author save(Author user);
     void update(int id, AuthorDTO authorDTO);
     void deleteById(int id);

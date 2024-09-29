@@ -12,7 +12,7 @@ import java.util.List;
 public interface BookService {
     Page<Book> findAll(int size, int page, String sortBy);
     Book findById(int id);
-    List<Book> findByName(String name);
+    List<Book> findByUsername(String name);
     Book save(Book user);
     void update(int id, BookDTO bookDTO);
     void deleteById(int id);

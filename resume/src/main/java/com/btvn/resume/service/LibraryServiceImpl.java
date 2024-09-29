@@ -34,7 +34,7 @@ public class LibraryServiceImpl implements LibraryService{
     }
 
     @Override
-    public List<Library> findByName(String name) {
+    public List<Library> findByUsername(String name) {
         return List.of();
     }
 

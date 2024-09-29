@@ -18,6 +18,4 @@ public class UserDTO {
     private String gender;
     @JsonProperty("location")
     private String location;
-    @JsonProperty("avatar_url")
-    private String avatarUrl;
 }
